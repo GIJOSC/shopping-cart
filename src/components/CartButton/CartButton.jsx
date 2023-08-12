@@ -6,6 +6,7 @@ function CartButton() {
   return (
     <button type="button" className="cart__button">
       <BsCartCheck />
+      <span className="cart-status">1</span>
     </button>
   );
 }
