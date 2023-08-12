@@ -1,6 +1,8 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 
+import "./SearchBar.css";
+
 function SearchBar() {
   return (
     <form className="search-bar">
