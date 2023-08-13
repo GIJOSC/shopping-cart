@@ -1,11 +1,11 @@
 import React from "react";
-import { BsCartCheck } from "react-icons/bs";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 import "./CartButton.css";
 
 function CartButton() {
   return (
     <button type="button" className="cart__button">
-      <BsCartCheck />
+      <HiOutlineShoppingCart />
       <span className="cart-status">1</span>
     </button>
   );
