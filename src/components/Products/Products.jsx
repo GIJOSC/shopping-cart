@@ -14,13 +14,7 @@ function Products() {
 
   console.log(products);
 
-  return (
-    <section className="products container">
-      {products.map((product) => (
-        <p key={product.title}>{product.title}</p>
-      ))}
-    </section>
-  );
+  return <section className="products container"></section>;
 }
 
 export default Products;
