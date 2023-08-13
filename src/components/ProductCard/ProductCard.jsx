@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./ProductCard.css";
+
 function ProductCard() {
   return (
     <section className="product-card">
