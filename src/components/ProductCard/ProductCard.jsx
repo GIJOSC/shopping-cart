@@ -1,5 +1,7 @@
 import React from "react";
 
+import { LiaCartPlusSolid } from "react-icons/lia";
+
 import "./ProductCard.css";
 
 function ProductCard() {
@@ -16,7 +18,7 @@ function ProductCard() {
         <h2 className="card__title">Notebook</h2>
       </div>
       <button type="button" className="button__add-cart">
-        +
+        <LiaCartPlusSolid />
       </button>
     </section>
   );
