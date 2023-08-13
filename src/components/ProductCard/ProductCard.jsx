@@ -1,21 +1,18 @@
 import React from "react";
-
+import propTypes from "prop-types";
 import { LiaCartPlusSolid } from "react-icons/lia";
 
 import "./ProductCard.css";
 
-function ProductCard() {
+function ProductCard({ data }) {
+  const { title, thumbnail, price } = data;
   return (
     <section className="product-card">
-      <img
-        src="https://http2.mlstatic.com/D_771626-MLU70185558987_062023-I.jpg"
-        alt="product"
-        className="card__Image"
-      />
+      <img src={thumbnail} alt="product" className="card__Image" />
 
       <div className="card__infos">
-        <h2 className="card__price">R$ 2.000</h2>
-        <h2 className="card__title">Notebook</h2>
+        <h2 className="card__price">{price}</h2>
+        <h2 className="card__title">{title}</h2>
       </div>
       <button type="button" className="button__add-cart">
         <LiaCartPlusSolid />
@@ -25,3 +22,7 @@ function ProductCard() {
 }
 
 export default ProductCard;
+
+ProductCard.proptypes = {
+  data: propTypes.shape({}),
+}.isRequired;
