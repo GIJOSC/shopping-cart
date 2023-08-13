@@ -3,7 +3,11 @@ import React from "react";
 function ProductCard() {
   return (
     <section className="product-card">
-      <img src="" alt="product" className="card__Image" />
+      <img
+        src="https://http2.mlstatic.com/D_771626-MLU70185558987_062023-I.jpg"
+        alt="product"
+        className="card__Image"
+      />
 
       <div className="card__infos">
         <h2 className="card__price">R$ 2.000</h2>
