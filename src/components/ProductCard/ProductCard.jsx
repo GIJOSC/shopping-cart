@@ -3,6 +3,7 @@ import propTypes from "prop-types";
 import { LiaCartPlusSolid } from "react-icons/lia";
 
 import "./ProductCard.css";
+import formatCurrency from "../../utils/formatCurrency";
 
 function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
@@ -16,7 +17,7 @@ function ProductCard({ data }) {
       />
 
       <div className="card__infos">
-        <h2 className="card__price">{price}</h2>
+        <h2 className="card__price">{formatCurrency(price, "USD")}</h2>
         <h2 className="card__title">{title}</h2>
       </div>
 
