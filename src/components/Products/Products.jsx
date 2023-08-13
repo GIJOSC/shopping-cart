@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 
 import "./Products.css";
@@ -8,9 +7,9 @@ function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetchProducts("notebook").then(() => {});
-
-    setProducts(response);
+    fetchProducts("notebook").then((response) => {
+      setProducts(response);
+    });
   }, []);
 
   console.log(products);
