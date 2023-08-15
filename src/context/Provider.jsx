@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import propTypes from "prop-types";
 import AppContext from "./AppContext";
+import PropTypes from "prop-types";
 
 function Provider({ children }) {
-  const [name, setName] = useState("Testando ...");
+  const [products, setProducts] = useState([]);
 
   const value = {
-    name,
-    setName,
+    products,
+    setProducts,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
@@ -16,5 +16,5 @@ function Provider({ children }) {
 export default Provider;
 
 Provider.proptypes = {
-  children: propTypes.any,
+  children: PropTypes.any,
 }.isRequired;
