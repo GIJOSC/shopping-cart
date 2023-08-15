@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
 import "./SearchBar.css";
+import fetchProducts from "../../api/fetchProducts";
 
 function SearchBar() {
   const [searchValue, setSearchValue] = useState("");
 
-  const handleSearch = (event) => {
+  const handleSearch = async (event) => {
     event.preventDefault();
-    alert("teste");
+    const products = await fetchProducts(searchValue);
+    console.log(products);
+    setSearchValue("");
   };
 
   return (
