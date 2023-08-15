@@ -6,7 +6,8 @@ import "./SearchBar.css";
 function SearchBar() {
   const [searchValue, setSearchValue] = useState("");
 
-  const handleSearch = () => {
+  const handleSearch = (event) => {
+    event.preventDefault();
     alert("teste");
   };
 
