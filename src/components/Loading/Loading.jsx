@@ -1,10 +1,10 @@
 import React from "react";
-import { RxReload } from "react-icons/rx";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import "./Loading.css";
 
 function Loading() {
-  return <RxReload className="loading" />;
+  return <AiOutlineLoading3Quarters className="loading" />;
 }
 
 export default Loading;

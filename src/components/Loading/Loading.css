@@ -2,6 +2,7 @@
   font-size: 2rem;
   margin: 200px auto 0;
   animation: spin linear 1s infinite;
+  width: 100%;
 }
 
 @keyframes spin {
