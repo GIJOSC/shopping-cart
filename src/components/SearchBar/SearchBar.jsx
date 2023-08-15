@@ -6,8 +6,12 @@ import "./SearchBar.css";
 function SearchBar() {
   const [searchValue, setSearchValue] = useState("");
 
+  const handleSearch = () => {
+    alert("teste");
+  };
+
   return (
-    <form className="search-bar">
+    <form className="search-bar" onSubmit={handleSearch}>
       <input
         type="search"
         value={searchValue}
