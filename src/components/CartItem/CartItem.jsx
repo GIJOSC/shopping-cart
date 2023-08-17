@@ -2,9 +2,11 @@ import React from "react";
 
 import { LiaCartArrowDownSolid } from "react-icons/lia";
 
+import "./CartItem.css";
+
 function CartItem() {
   return (
-    <section>
+    <section className="cart-item">
       <img src="" alt="Imagem do produto" className="cart-item-image" />
       <div className="cart-item-content">
         <h3 className="cart-item-title">Titulo do Produto</h3>
