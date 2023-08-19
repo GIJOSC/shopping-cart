@@ -6,7 +6,7 @@ function Cart() {
   return (
     <section className="cart">
       <div className="cart-items">
-        <CartItem />
+        <CartItem data={{ thumbnail: "", tittle: "", price: "123" }} />
       </div>
       <div className="cart-resume">resumo do carrinho</div>
     </section>
