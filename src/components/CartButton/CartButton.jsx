@@ -9,7 +9,9 @@ function CartButton() {
   return (
     <button type="button" className="cart__button">
       <HiOutlineShoppingCart />
-      <span className="cart-status">{cartItems.length}</span>
+      {cartItems.length > 0 && (
+        <span className="cart-status">{cartItems.length}</span>
+      )}
     </button>
   );
 }
