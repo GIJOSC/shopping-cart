@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import propTypes from "prop-types";
-import { LiaCartPlusSolid } from "react-icons/lia";
+import { BsFillCartPlusFill } from "react-icons/bs";
 
 import "./ProductCard.css";
 import formatCurrency from "../../utils/formatCurrency";
+import AppContext from "../../context/AppContext";
 
 function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
 
+  const { cartItems, setCartItems } = useContext(AppContext);
+
+  const handleAddCart = () => setCartItems([...cartItems, data]);
+
   return (
     <section className="product-card">
       <img
-        src={thumbnail.replace(/\w.jpg/gi, "W.jpg")}
+        src={thumbnail.replace(/\w\.jpg/gi, "W.jpg")}
         alt="product"
-        className="card__Image"
+        className="card__image"
       />
 
       <div className="card__infos">
@@ -21,8 +26,12 @@ function ProductCard({ data }) {
         <h2 className="card__title">{title}</h2>
       </div>
 
-      <button type="button" className="button__add-cart">
-        <LiaCartPlusSolid />
+      <button
+        type="button"
+        className="button__add-cart"
+        onClick={handleAddCart}
+      >
+        <BsFillCartPlusFill />
       </button>
     </section>
   );
@@ -30,6 +39,6 @@ function ProductCard({ data }) {
 
 export default ProductCard;
 
-ProductCard.proptypes = {
+ProductCard.propTypes = {
   data: propTypes.shape({}),
 }.isRequired;
